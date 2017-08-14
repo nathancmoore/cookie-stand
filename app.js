@@ -37,18 +37,19 @@ var alki = {
   avgCust: 4.6,
 };
 
+var randomCust = 0;
+
 function generateRandom(obj, array) {
   array.push('Generated sales for ' + obj.name + ':');
   for (var i = 6; i < 12; i++) {
-    var randomCust = Math.floor(Math.random() * (obj.max - obj.min) + obj.min);
-    array.push(i + 'am: ' + (randomCust * obj.avgCust) + ' cookies');
+    randomCust = Math.floor(Math.random() * (obj.max - obj.min) + obj.min);
+    array.push(i + 'am: ' + Math.round(randomCust * obj.avgCust) + ' cookies');
   }
 
-  array.push('12pm: ' + (randomCust * obj.avgCust) + ' cookies');
-  var i = 1;
-  for (var i = 1; i < 9; i++) {
-    var randomCust = Math.floor(Math.random() * (obj.max - obj.min) + obj.min);
-    array.push(i + 'pm: ' + (randomCust * obj.avgCust) + ' cookies');
+  array.push('12pm: ' + Math.round(randomCust * obj.avgCust) + ' cookies');
+  for (i = 1; i < 9; i++) {
+    randomCust = Math.floor(Math.random() * (obj.max - obj.min) + obj.min);
+    array.push(i + 'pm: ' + Math.round(randomCust * obj.avgCust) + ' cookies');
   }
   return[array];
 }
