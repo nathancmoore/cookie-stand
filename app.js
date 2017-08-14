@@ -122,24 +122,3 @@ function generateRandomAlki() {
   return[salesAlki];
 }
 generateRandomAlki();
-
-// function generateRandom(obj, array) {
-//   array.push('Generated sales for ' + obj.name + ':');
-//   for (var i = 6; i < 12; i++) {
-//     randomCust = Math.floor(Math.random() * (obj.max - obj.min) + obj.min);
-//     array.push(i + 'am: ' + Math.round(randomCust * obj.avgCust) + ' cookies');
-//   }
-//
-//   array.push('12pm: ' + Math.round(randomCust * obj.avgCust) + ' cookies');
-//   for (i = 1; i < 9; i++) {
-//     randomCust = Math.floor(Math.random() * (obj.max - obj.min) + obj.min);
-//     array.push(i + 'pm: ' + Math.round(randomCust * obj.avgCust) + ' cookies');
-//   }
-//   return[array];
-// }
-//
-// generateRandom(firstAndPike, salesFirstAndPike);
-// generateRandom(seaTacAirport, salesSeaTacAirport);
-// generateRandom(seattleCenter, salesSeattleCenter);
-// generateRandom(capitolHill, salesCapitolHill);
-// generateRandom(alki, salesAlki);
