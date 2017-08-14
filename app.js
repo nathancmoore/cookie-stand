@@ -13,6 +13,8 @@ var firstAndPike = {
   avgCust: 6.3,
 };
 
+var randomCust = 0;
+
 function generateRandomFirstAndPike() {
   salesFirstAndPike.push('Generated sales for ' + firstAndPike.name + ':');
   for (var i = 6; i < 12; i++) {
@@ -36,12 +38,44 @@ var seaTacAirport = {
   avgCust: 1.2,
 };
 
+function generateRandomSeaTacAirport() {
+  salesSeaTacAirport.push('Generated sales for ' + seaTacAirport.name + ':');
+  for (var i = 6; i < 12; i++) {
+    randomCust = Math.floor(Math.random() * (seaTacAirport.max - seaTacAirport.min) + seaTacAirport.min);
+    salesSeaTacAirport.push(i + 'am: ' + Math.round(randomCust * seaTacAirport.avgCust) + ' cookies');
+  }
+
+  salesSeaTacAirport.push('12pm: ' + Math.round(randomCust * seaTacAirport.avgCust) + ' cookies');
+  for (i = 1; i < 9; i++) {
+    randomCust = Math.floor(Math.random() * (seaTacAirport.max - seaTacAirport.min) + seaTacAirport.min);
+    salesSeaTacAirport.push(i + 'pm: ' + Math.round(randomCust * seaTacAirport.avgCust) + ' cookies');
+  }
+  return[salesSeaTacAirport];
+}
+generateRandomSeaTacAirport();
+
 var seattleCenter = {
   name: 'Seattle Center',
   min: 11,
   max: 38,
   avgCust: 3.7,
 };
+
+function generateRandomSeattleCenter() {
+  salesSeattleCenter.push('Generated sales for ' + seattleCenter.name + ':');
+  for (var i = 6; i < 12; i++) {
+    randomCust = Math.floor(Math.random() * (seattleCenter.max - seattleCenter.min) + seattleCenter.min);
+    salesSeattleCenter.push(i + 'am: ' + Math.round(randomCust * seattleCenter.avgCust) + ' cookies');
+  }
+
+  salesSeattleCenter.push('12pm: ' + Math.round(randomCust * seattleCenter.avgCust) + ' cookies');
+  for (i = 1; i < 9; i++) {
+    randomCust = Math.floor(Math.random() * (seattleCenter.max - seattleCenter.min) + seattleCenter.min);
+    salesSeattleCenter.push(i + 'pm: ' + Math.round(randomCust * seattleCenter.avgCust) + ' cookies');
+  }
+  return[salesSeattleCenter];
+}
+generateRandomSeattleCenter();
 
 var capitolHill = {
   name: 'Capitol Hill',
@@ -50,6 +84,22 @@ var capitolHill = {
   avgCust: 2.3,
 };
 
+function generateRandomCapitolHill() {
+  salesCapitolHill.push('Generated sales for ' + capitolHill.name + ':');
+  for (var i = 6; i < 12; i++) {
+    randomCust = Math.floor(Math.random() * (capitolHill.max - capitolHill.min) + capitolHill.min);
+    salesCapitolHill.push(i + 'am: ' + Math.round(randomCust * capitolHill.avgCust) + ' cookies');
+  }
+
+  salesCapitolHill.push('12pm: ' + Math.round(randomCust * capitolHill.avgCust) + ' cookies');
+  for (i = 1; i < 9; i++) {
+    randomCust = Math.floor(Math.random() * (capitolHill.max - capitolHill.min) + capitolHill.min);
+    salesCapitolHill.push(i + 'pm: ' + Math.round(randomCust * capitolHill.avgCust) + ' cookies');
+  }
+  return[salesCapitolHill];
+}
+generateRandomCapitolHill();
+
 var alki = {
   name: 'Alki',
   min: 2,
@@ -57,7 +107,21 @@ var alki = {
   avgCust: 4.6,
 };
 
-var randomCust = 0;
+function generateRandomAlki() {
+  salesAlki.push('Generated sales for ' + alki.name + ':');
+  for (var i = 6; i < 12; i++) {
+    randomCust = Math.floor(Math.random() * (alki.max - alki.min) + alki.min);
+    salesAlki.push(i + 'am: ' + Math.round(randomCust * alki.avgCust) + ' cookies');
+  }
+
+  salesAlki.push('12pm: ' + Math.round(randomCust * alki.avgCust) + ' cookies');
+  for (i = 1; i < 9; i++) {
+    randomCust = Math.floor(Math.random() * (alki.max - alki.min) + alki.min);
+    salesAlki.push(i + 'pm: ' + Math.round(randomCust * alki.avgCust) + ' cookies');
+  }
+  return[salesAlki];
+}
+generateRandomAlki();
 
 // function generateRandom(obj, array) {
 //   array.push('Generated sales for ' + obj.name + ':');
