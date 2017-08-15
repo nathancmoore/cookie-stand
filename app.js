@@ -38,7 +38,6 @@ function Store(name, min, max, avgCust){
   this.avgCust = avgCust;
   this.generate = function() {
     var totalsales = 0;
-
     var table = document.getElementsByTagName('table')[0];
     var tr = document.createElement('tr');
     tr.innerText = this.name;
@@ -64,34 +63,29 @@ function Store(name, min, max, avgCust){
   this.generate();
 };
 
-// function footer() {
-//   var body = document.getElementsByTagName('body')[0];
-//   var table = document.createElement('table');
-//   body.appendChild(table);
-//   var table = document.getElementsByTagName('table')[0];
-//   var tr = document.createElement('tr');
-//   table.appendChild(tr);
-//   var tr = document.getElementsByTagName('tr')[0];
-//   var th = document.createElement('th');
-//   tr.appendChild(th);
-//
-//   for (var i = 0; i < hours.length; i++) {
-//     var tr = document.getElementsByTagName('tr')[0];
-//     var th = document.createElement('th');
-//     th.innerText = hours[i];
-//     tr.appendChild(th);
-//   };
-//
-//   var tr = document.getElementsByTagName('tr')[0];
-//   var th = document.createElement('th');
-//   th.innerText = 'TOTAL';
-//   tr.appendChild(th);
-// };
-//
-// footer();
-
 var pike = new Store('First and Pike', 23, 65, 6.3);
 var seatac = new Store('SeaTac Airport', 3, 24, 1.2);
 var seacenter = new Store('Seattle Center', 11, 38, 3.7);
 var caphill = new Store('Capitol Hill', 20, 38, 2.3);
 var alki = new Store('Alki', 2, 16, 4.6);
+
+function footer() {
+  var table = document.getElementsByTagName('table')[0];
+  var tr = document.createElement('tr');
+  tr.setAttribute('id', 'special-boi');
+  tr.innerText = 'TOTAL';
+  table.appendChild(tr);
+  // var tr = document.getElementsByTagName('tr')[0];
+  // var th = document.createElement('th');
+  // tr.appendChild(th);
+
+  // for (var i = 0; i < hours.length; i++) {
+  //   var tr = document.getElementsByTagName('tr')[0];
+  //   var th = document.createElement('th');
+  //   th.innerText = hourlytotals[i];
+  //   tr.appendChild(th);
+  // };
+
+};
+
+footer();

@@ -6,3 +6,6 @@ li {
 table, tr, th, td {
   border: thin black solid;
 }
+#special-boi {
+  font-weight: bold;
+}
