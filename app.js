@@ -101,3 +101,4 @@ function footer() {
 };
 
 footer();
+//this comment isn't necessary
