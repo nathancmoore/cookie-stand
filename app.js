@@ -59,6 +59,7 @@ function Store(name, min, max, avgCust){
     var tr = document.getElementsByClassName(this.name)[0];
     var td = document.createElement('td');
     td.innerText = totalsales;
+    td.setAttribute('id', 'special-boi');
     td.setAttribute('class', this.name);
     tr.appendChild(td);
   };
