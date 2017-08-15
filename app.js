@@ -4,6 +4,8 @@ var hours = ['6am', '7am', '8am', '9am', '10am', '11am', '12pm', '1pm', '2pm', '
 
 var hourlytotals = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
 
+var totaltotal = 0;
+
 function header() {
   var body = document.getElementsByTagName('body')[0];
   var table = document.createElement('table');
@@ -83,7 +85,18 @@ function footer() {
     td.innerText = hourlytotals[i];
     tr.appendChild(td);
   };
-
+  function sum() {
+    var value = 0;
+    for (var i = 0; i < hourlytotals.length; i++) {
+      value = hourlytotals[i] + value;
+    }
+    totaltotal = value;
+  };
+  sum();
+  var tr = document.getElementsByClassName('footer')[0];
+  var td = document.createElement('td');
+  td.innerText = totaltotal;
+  tr.appendChild(td);
 };
 
 footer();
