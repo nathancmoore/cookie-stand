@@ -17,8 +17,10 @@ var firstAndPike = {
     var totalsales = 0;
     var body = document.getElementsByTagName('body')[0];
     var ul = document.createElement('ul');
+    var h2 = document.createElement('h2');
+    body.appendChild(h2);
+    h2.innerText = this.name;
     body.appendChild(ul);
-    salesFirstAndPike.push('Generated sales for ' + this.name + ':');
     for (var i = 6; i < 12; i++) {
       randomCust = Math.floor(Math.random() * (this.max - this.min) + this.min);
       var sales = Math.round(randomCust * this.avgCust);
@@ -65,8 +67,10 @@ var seaTacAirport = {
     var totalsales = 0;
     var body = document.getElementsByTagName('body')[0];
     var ul = document.createElement('ul');
+    var h2 = document.createElement('h2');
+    body.appendChild(h2);
+    h2.innerText = this.name;
     body.appendChild(ul);
-    salesSeaTacAirport.push('Generated sales for ' + this.name + ':');
     for (var i = 6; i < 12; i++) {
       randomCust = Math.floor(Math.random() * (this.max - this.min) + this.min);
       var sales = Math.round(randomCust * this.avgCust);
@@ -112,8 +116,10 @@ var seattleCenter = {
     var totalsales = 0;
     var body = document.getElementsByTagName('body')[0];
     var ul = document.createElement('ul');
+    var h2 = document.createElement('h2');
+    body.appendChild(h2);
+    h2.innerText = this.name;
     body.appendChild(ul);
-    salesSeattleCenter.push('Generated sales for ' + this.name + ':');
     for (var i = 6; i < 12; i++) {
       randomCust = Math.floor(Math.random() * (this.max - this.min) + this.min);
       var sales = Math.round(randomCust * this.avgCust);
@@ -159,39 +165,41 @@ var capitolHill = {
     var totalsales = 0;
     var body = document.getElementsByTagName('body')[0];
     var ul = document.createElement('ul');
+    var h2 = document.createElement('h2');
+    body.appendChild(h2);
+    h2.innerText = this.name;
     body.appendChild(ul);
-    salesCapitolHill.push('Generated sales for ' + this.name + ':');
     for (var i = 6; i < 12; i++) {
       randomCust = Math.floor(Math.random() * (this.max - this.min) + this.min);
       var sales = Math.round(randomCust * this.avgCust);
       totalsales += sales;
       console.log(totalsales, sales);
-      salesCapitolHill.push(i + 'am: ' + sales + ' cookies');
+      salesAlki.push(i + 'am: ' + sales + ' cookies');
       var li = document.createElement('li');
       ul.appendChild(li);
-      li.innerText = salesCapitolHill[i - 6];
+      li.innerText = salesAlki[i - 6];
     }
     var sales = Math.round(randomCust * this.avgCust);
     var totalsales = (totalsales + sales);
-    salesCapitolHill.push('12pm: ' + sales + ' cookies');
+    salesAlki.push('12pm: ' + sales + ' cookies');
     var newLi = document.createElement('li');
     ul.appendChild(li);
-    li.innerText = salesCapitolHill[6];
+    li.innerText = salesAlki[6];
 
     for (i = 1; i < 9; i++) {
       randomCust = Math.floor(Math.random() * (this.max - this.min) + this.min);
       var sales = Math.round(randomCust * this.avgCust);
       var totalsales = (totalsales + sales);
-      salesCapitolHill.push(i + 'pm: ' + sales + ' cookies');
+      salesAlki.push(i + 'pm: ' + sales + ' cookies');
       var li = document.createElement('li');
       ul.appendChild(li);
-      li.innerText = salesCapitolHill[i + 6];
+      li.innerText = salesAlki[i + 6];
     }
 
     var li = document.createElement('li');
     ul.appendChild(li);
     li.innerText = 'Total: ' + totalsales + ' cookies';
-    return[salesCapitolHill];
+    return[salesAlki];
   },
 };
 
@@ -206,8 +214,10 @@ var alki = {
     var totalsales = 0;
     var body = document.getElementsByTagName('body')[0];
     var ul = document.createElement('ul');
+    var h2 = document.createElement('h2');
+    body.appendChild(h2);
+    h2.innerText = this.name;
     body.appendChild(ul);
-    salesAlki.push('Generated sales for ' + this.name + ':');
     for (var i = 6; i < 12; i++) {
       randomCust = Math.floor(Math.random() * (this.max - this.min) + this.min);
       var sales = Math.round(randomCust * this.avgCust);
