@@ -73,18 +73,16 @@ function footer() {
   var table = document.getElementsByTagName('table')[0];
   var tr = document.createElement('tr');
   tr.setAttribute('id', 'special-boi');
+  tr.setAttribute('class', 'footer');
   tr.innerText = 'TOTAL';
   table.appendChild(tr);
-  // var tr = document.getElementsByTagName('tr')[0];
-  // var th = document.createElement('th');
-  // tr.appendChild(th);
 
-  // for (var i = 0; i < hours.length; i++) {
-  //   var tr = document.getElementsByTagName('tr')[0];
-  //   var th = document.createElement('th');
-  //   th.innerText = hourlytotals[i];
-  //   tr.appendChild(th);
-  // };
+  for (var i = 0; i < hours.length; i++) {
+    var tr = document.getElementsByClassName('footer')[0];
+    var td = document.createElement('td');
+    td.innerText = hourlytotals[i];
+    tr.appendChild(td);
+  };
 
 };
 
