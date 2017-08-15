@@ -19,30 +19,39 @@ function Store(name, min, max, avgCust){
   this.generate = function() {
     var totalsales = 0;
     var body = document.getElementsByTagName('body')[0];
-    var ul = document.createElement('ul');
-    var h2 = document.createElement('h2');
-    body.appendChild(h2);
-    h2.innerText = this.name;
-    body.appendChild(ul);
+    var table = document.createElement('table');
+    body.appendChild(table);
+    var table = document.getElementsByTagName('table')[0];
+    var tr = document.createElement('tr');
+    table.appendChild(tr);
+
     for (var i = 0; i < hours.length; i++) {
-      randomCust = Math.floor(Math.random() * (this.max - this.min) + this.min);
-      var sales = Math.round(randomCust * this.avgCust);
-      totalsales += sales;
-      console.log(totalsales, sales);
-      salesFirstAndPike.push(i + 'am: ' + sales + ' cookies');
-      var li = document.createElement('li');
-      ul.appendChild(li);
-      li.innerText = salesFirstAndPike[i];
+      var tr = document.getElementsByTagName('tr')[0];
+      var th = document.createElement('th');
+      th.innerText = hours[i];
+      tr.appendChild(th);
     };
-    var li = document.createElement('li');
-    ul.appendChild(li);
-    li.innerText = 'Total: ' + totalsales + ' cookies';
-    return[salesFirstAndPike];
   };
+  this.generate();
+  //   for (var i = 0; i < hours.length; i++) {
+  //     randomCust = Math.floor(Math.random() * (this.max - this.min) + this.min);
+  //     var sales = Math.round(randomCust * this.avgCust);
+  //     totalsales += sales;
+  //     console.log(totalsales, sales);
+  //     salesFirstAndPike.push(i + 'am: ' + sales + ' cookies');
+  //     var li = document.createElement('li');
+  //     ul.appendChild(li);
+  //     li.innerText = salesFirstAndPike[i];
+  //   };
+  //   var li = document.createElement('li');
+  //   ul.appendChild(li);
+  //   li.innerText = 'Total: ' + totalsales + ' cookies';
+  //   return[salesFirstAndPike];
+  // };
 
 };
 
-new Store('First and Pike', 23, 65, 6.3);
+var pike = new Store('First and Pike', 23, 65, 6.3);
 
 // var seaTacAirport = {
 //   name: 'SeaTacAirport',
