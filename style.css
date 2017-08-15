@@ -3,3 +3,6 @@ li {
   margin-left: 5%;
   font-family: 'Roboto Condensed', sans-serif;
 }
+table, tr, th, td {
+  border: thin black solid;
+}
