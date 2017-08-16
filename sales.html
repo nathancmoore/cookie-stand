@@ -2,11 +2,44 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title></title>
+    <title>Title</title>
     <link rel = "stylesheet"type = "text/css" href = "style.css" />
     <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed" rel="stylesheet">
   </head>
   <body>
+    <h1>CREATE A NEW STORE</h1>
+    <form id="theForm">
+      <table>
+        <tr>
+          <td><label for="storeName">New store name: </label></td>
+          <td><input type="text" name="storeName" class="field" placeholder="name" required /></td>
+        </tr>
+        <tr>
+          <td><label for="min">Minimum customers per hour: </label></td>
+          <td><input type="number" name="min" class="field" placeholder="min" required /></td>
+        </tr>
+        <tr>
+          <td><label for="max">Maximum customers per hour: </label></td>
+          <td><input type="number" name="max" class="field" placeholder="max" required /></td>
+        </tr>
+        <tr>
+          <td><label for="avgCust">Average cookies per customer: </label></td>
+          <td>
+            <textarea type="number" name="avgCust" class="field" placeholder="avgCust" required></textarea>
+          </td>
+        </tr>
+        <tr>
+          <td></td>
+          <td style="text-align: right;">
+            <input type="submit" value="Generate a new store!" id="test" />
+          </td>
+        </tr>
+      </table>
+    </form>
+    <p><img src="salmon.png" alt=""></p>
+    <table>
+
+    </table>
   </body>
   <script type = "text/javascript" src = "app.js"></script>
 </html>
