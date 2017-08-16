@@ -60,6 +60,29 @@ function Store(name, min, max, avgCust){
     tr.appendChild(td);
   };
   this.generate();
+
+  function footer() {
+    var table = document.getElementsByTagName('table')[1];
+    var tr = document.createElement('tr');
+    tr.setAttribute('id', 'special-boi');
+    tr.setAttribute('class', 'footer');
+    tr.innerText = 'TOTAL';
+    table.appendChild(tr);
+
+    for (var i = 0; i < hours.length; i++) {
+      tr = document.getElementsByClassName('footer')[0];
+      var td = document.createElement('td');
+      td.innerText = hourlyTotal[i];
+      tr.appendChild(td);
+    };
+    tr = document.getElementsByClassName('footer')[0];
+    td = document.createElement('td');
+    td.innerText = totalTotal;
+    tr.appendChild(td);
+  };
+
+  footer();
+
 };
 
 // var pike = new Store('First and Pike', 23, 65, 6.3);
@@ -67,28 +90,6 @@ function Store(name, min, max, avgCust){
 // var seacenter = new Store('Seattle Center', 11, 38, 3.7);
 // var caphill = new Store('Capitol Hill', 20, 38, 2.3);
 // var alki = new Store('Alki', 2, 16, 4.6);
-
-function footer() {
-  var table = document.getElementsByTagName('table')[1];
-  var tr = document.createElement('tr');
-  tr.setAttribute('id', 'special-boi');
-  tr.setAttribute('class', 'footer');
-  tr.innerText = 'TOTAL';
-  table.appendChild(tr);
-
-  for (var i = 0; i < hours.length; i++) {
-    tr = document.getElementsByClassName('footer')[0];
-    var td = document.createElement('td');
-    td.innerText = hourlyTotal[i];
-    tr.appendChild(td);
-  };
-  tr = document.getElementsByClassName('footer')[0];
-  td = document.createElement('td');
-  td.innerText = totalTotal;
-  tr.appendChild(td);
-};
-
-footer();
 
 function newStore(event){
   event.preventDefault();
