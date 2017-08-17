@@ -24,9 +24,7 @@ h1 {
    font-size: 40px;
 }
 #links {
-  border-top: thin solid white;
-  border-bottom: thin solid white;
-  border-right: thin solid white;
+  border: thin solid white;
 }
 td {
   font-family: 'Roboto Condensed', sans-serif;
@@ -43,7 +41,7 @@ hr {
 }
 h2 {
   font-family: 'Roboto Condensed', sans-serif;
-  font-size: 12px;
+  font-size: 16px;
   color:white;
 }
 #mission {
@@ -54,6 +52,10 @@ li {
   list-style-image: url(fish.gif);
   margin-left: 5%;
   font-family: 'Roboto Condensed', sans-serif;
+}
+table {
+  margin-left: auto;
+  margin-right: auto;
 }
 
 #special-boi {
