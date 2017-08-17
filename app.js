@@ -85,11 +85,11 @@ function Store(name, min, max, avgCust){
 
 };
 
-// var pike = new Store('First and Pike', 23, 65, 6.3);
-// var seatac = new Store('SeaTac Airport', 3, 24, 1.2);
-// var seacenter = new Store('Seattle Center', 11, 38, 3.7);
-// var caphill = new Store('Capitol Hill', 20, 38, 2.3);
-// var alki = new Store('Alki', 2, 16, 4.6);
+var pike = new Store('First and Pike', 23, 65, 6.3);
+var seatac = new Store('SeaTac Airport', 3, 24, 1.2);
+var seacenter = new Store('Seattle Center', 11, 38, 3.7);
+var caphill = new Store('Capitol Hill', 20, 38, 2.3);
+var alki = new Store('Alki', 2, 16, 4.6);
 
 function newStore(event){
   event.preventDefault();
@@ -103,3 +103,27 @@ function newStore(event){
 var test = document.getElementById('theForm');
 test.addEventListener('submit', newStore);
 // newStore();
+
+this.render = function() {
+  this.dailySalesGen();
+  var cont = document.getElementById('header');
+  var tableRow = document.createElement('tr');
+  cont.insertBefore(tableTow, cont.childNodes[1]);
+  createAppend('th', '', '', this.name, tableRow);
+  for(var i = 0; i < this.salesReport.length; i++) {
+    createAppend('td', '', '', this.salesReport[i], tableRow);
+  }
+  createAppend('td', 'lastCel', '', this.totalSold, tableTow);
+};
+// CREATE AND APPEND FUNCTION POLISH ME UP
+// function createAppend(newElementTag, className, idName, content, parentElement) {
+//   var newElem = document.createElement(newElementTag);
+//   if(className && className !== '') {
+//     newElem.className = className;
+//   } if (idName && idName !== '') {
+//     newElem.id = idName;
+//   }
+//   newElem.innerText = content;
+//   parentElement.appendChild(newElem);
+//   return newElem;
+// };
