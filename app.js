@@ -104,26 +104,21 @@ var test = document.getElementById('theForm');
 test.addEventListener('submit', newStore);
 // newStore();
 
-this.render = function() {
-  this.dailySalesGen();
-  var cont = document.getElementById('header');
-  var tableRow = document.createElement('tr');
-  cont.insertBefore(tableTow, cont.childNodes[1]);
-  createAppend('th', '', '', this.name, tableRow);
-  for(var i = 0; i < this.salesReport.length; i++) {
-    createAppend('td', '', '', this.salesReport[i], tableRow);
-  }
-  createAppend('td', 'lastCel', '', this.totalSold, tableTow);
-};
-// CREATE AND APPEND FUNCTION POLISH ME UP
-// function createAppend(newElementTag, className, idName, content, parentElement) {
-//   var newElem = document.createElement(newElementTag);
-//   if(className && className !== '') {
-//     newElem.className = className;
-//   } if (idName && idName !== '') {
-//     newElem.id = idName;
+// this.render = function() {
+//   this.dailySalesGen();
+//   var cont = document.getElementById('header');
+//   var tableRow = document.createElement('tr');
+//   cont.insertBefore(tableTow, cont.childNodes[1]);
+//   createAppend('th', '', '', this.name, tableRow);
+//   for(var i = 0; i < this.salesReport.length; i++) {
+//     createAppend('td', '', '', this.salesReport[i], tableRow);
 //   }
-//   newElem.innerText = content;
-//   parentElement.appendChild(newElem);
-//   return newElem;
+//   createAppend('td', 'lastCel', '', this.totalSold, tableTow);
+// };
+// function createAppend(newChildElementTag, parentElement, newContent, newClass, newId) {
+//   var child = document.createElement(newChildElementTag);
+//   child.class = newClass;
+//   child.id = newId;
+//   child.innerText = newContent;
+//   parentElement.appendChild(child);
 // };
